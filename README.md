@@ -1,7 +1,7 @@
 BrcmPatchRAM
 ============
 
-[![Build Status](https://github.com/acidanthera/BrcmPatchRAM/workflows/CI/badge.svg?branch=master)](https://github.com/acidanthera/BrcmPatchRAM/actions) [![Scan Status](https://scan.coverity.com/projects/22191/badge.svg?flat=1)](https://scan.coverity.com/projects/22191)
+[![Build Status](https://github.com/acidanthera/BrcmPatchRAM/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/acidanthera/BrcmPatchRAM/actions) [![Scan Status](https://scan.coverity.com/projects/22191/badge.svg?flat=1)](https://scan.coverity.com/projects/22191)
 
 ### Translate Language
 
@@ -255,6 +255,7 @@ For example, to change `mPostResetDelay` to 400 ms, use the kernel boot argument
 
 Note: Some with the typical "wake from sleep" problems are reporting success with: `bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300`.  Or slightly longer delays: `bpr_probedelay=200 bpr_initialdelay=400 bpr_postresetdelay=400`.
 
+On macOS 12.4 and newer versions, a new address check has been introduced in `bluetoothd`, thus an error will be triggered if two Bluetooth devices have the same address. However, this check can be circumvented by adding the boot argument `-btlfxallowanyaddr`.
 
 ### Details
 
@@ -335,7 +336,7 @@ http://drivers.softpedia.com/get/BLUETOOTH/Broadcom/ASUS-X99-DELUXE-Broadcom-Blu
 
 For an automatic update you can unpack the Broadcom USB bluetooth files and run `firmware_update.tool`.
 
-*Should you come across newer drivers than 12.0.0.9860, please let me know.*
+*Should you come across newer drivers than 12.0.1.1012, please let me know.*
 
 In order to get the device specific firmware for your device take the following steps:
 
